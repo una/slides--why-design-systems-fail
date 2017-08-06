@@ -77,7 +77,11 @@ Here's a barebones example of a fully working reveal.js presentation:
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
+				<section>
+					<h1>Why Design Systems Fail</h1>
+					<h2>NYC Design Systems Coalition | August 17th, 2017</h2>
+					<h3>Una Kravets | @una</h3>
+				</section>
 				<section>Slide 2</section>
 			</div>
 		</div>
