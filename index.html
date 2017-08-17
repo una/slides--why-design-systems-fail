@@ -86,7 +86,9 @@
 					<h3>Una Kravets | <span class="tomato">@una</span></h3></section>
 				<section data-background="tomato">
 					<blockquote>"Empowering product growth with design systems"</blockquote>
-					<aside class="notes">I think a big part of this is understanding what works and what doesn't and setting ourselves up for success</aside>
+					<aside class="notes" data-markdown>
+						- I think a big part of *this*, of enabling product growth, is ensuring a successful design system. 
+						- Learning what works and what doesn't, and iterating on it.</aside>
 				</section>
 				<section>
 					<h2>A Little Bit About Me</h2>
@@ -112,61 +114,74 @@
 					</ul>
 					<aside class="notes" data-markdown>
 						- Within all of those companies, I've seen multiple design systems emerge and try to call themselves the single source of truth.
+						- At DigitalOcean, there are currently 3 floating around, and I can't say I'm not responsible for more than one of these.
+						- When you get frustrated and want to tear something down, though, its important to remember this:
 					</aside>
 				</section>
 				<section data-background="white">
 					<img src="img/competing standards.png" alt="">
 					<aside class="notes" data-markdown>
-						- So why weren't people using existing design systems?
+						- People weren't using the first design system that was built for DigitalOcean's cloud dashboard
+						- And a seperate system was then built for the marketing site, which was fine — you can gave different systems if needs are entirely different
+						- But the problem was back witht he first system — that people weren't utilizing it, and this was causing code cruft 
+					</aside>
+				</section>
+				<section>
+					<img src="img/selectors.jpg" alt="">
+					<aside class="notes" data-markdown>
+						- When I did an Audit, I found that 96KB of the existing CSS was the design system
+						- This was only 28% of the total CSS, signaling that most of the CSS was overrides and additional components
+						- There were 57 unique font sizes, 14 z-indices, 121 unique color declarations, 19 unique font family declarations
+						- So there was room for improvement
+						- But most importantly, I wanted to know why people were adding on and not using the existing system
 						- I think understanding this point is critical to the discussion of how to empower a company to grow via design systems
-						- Because if you don't take usage and support into account, you're missing out on all of the positives here
+						- Because if you don't take usage and support into account, you're missing out on all of the benefits of your hard work building that system
 					</aside>
 				</section>
 				<section>
 					<h2>Happy Design Systems:</h2>
 					<ul>
-						<li>Scale Good Standards</li>
-						<li>Build-in Accessibility</li>
-						<li>Unify Component Style</li>
-						<li>Unify Component Code</li>
-						<li>Reduce Code Cruft</li>
-						<li>Speed Up Product Delivery</li>
+						<li class="fragment">Scale Good Standards</li>
+						<li class="fragment">Build-in Accessibility</li>
+						<li class="fragment">Unify Component Style</li>
+						<li class="fragment">Unify Component Code</li>
+						<li class="fragment">Reduce Code Cruft</li>
+						<li class="fragment">Speed Up Product Delivery</li>
 					</ul>
-					<aside class="notes">
-						These are all good things – the happy path. So we should all be aligned behind those ideas. But that's not really what happens is it? Because engineers are judged on different criteria than designers. They need to push features out because their job depends on it. It's not that engineers are resistant to accessibility or scaling good standards, its just that this isn't what they're being evaluated on. If it gets in their way, guess what wins? Building the feature, and getting it pushed out.
-					</aside>
-				</section>
-				<section>
-					-- image here of the CSS audit --
 					<aside class="notes" data-markdown>
-						- This was the initial CSS audit I did. I found that about 20% of that was the style system (Buoy) nad 80% was overrides on it, or new product that just ignored it entirely, so I wanted to look into WHY. What had happened there? We had this design system in place nut nobody was using it, and it was actually doing more harm than good.
-						- There was a big debate on whether or not we should go back and try to fix the outdated, somewhat broken system, OR if we instead should build a new one
-						- There has to be reason to build a new one, if not -- you will end up with just another standard
+						- These are all good things – the happy path.
+						- So at this point, you're wondering: there are so many benefits, how could developers not use a design system?
+						- The answer is simple: We're all being judged on different things.
+						- Most people aren't being judged on clean code, they need to build features, their job depends on it.
+						- You have to separate that fact from your own OKRs and what you're evaluated on.
+						- Everything you do needs to support your customer (the engineers) and their needs
+						- And its not an easy task
+						- So lets get started at looking at what we should be doing to have a successful design system
 					</aside>
 				</section>
 				<section data-background="img/gym.jpg">
-					<h1>Investment</h1>
-					<p>To have a successful design system, you need to make a continuous effort to invest resources into it. </p>
-					<aside class="notes">
+					<h1>1. Investment</h1>
+					<p>To have a successful design system, you need to make a continuous effort to invest resources into it.</p>
+					<aside class="notes" data-markdown>
 						- **It's like working out**. 
 						- Small incremental investments over time lead to big gains overall. 
-						- If you invest once (say, 3 months of overhauling your design system), but neglect to keep it up, you'll find immediate gratification but won't see much improvement after that.
-						- You're probably going to lose some of the gains you made as your codebase becomes messier and starts to stray from your original design system, and then you'll find yourself in for another round of large investment, but dreading going through the process because its fallen out of shape.
-						- Because of how they scale, design systems can really make a large impact across the platform and thus its important to really invest in things like accessibility from the start
+						- If you invest once in a design system (say, 3 months of overhauling it) but neglect to keep it up, you won't find much improvement after that immediate gratification
+						- People will stop using it as it becomes out of sync with new designs and you'll end up with strange, floating bits of code that nobody is using
+						- And then you'll find yourself in for another round of large investment, but dreading going through the process since its fallen out of shape.
+						- And because of how they scale, design systems can really make a large impact across the platform, making it extremely important to really invest in things like accessibility from the start
+						- It's also important to have some kind of ownership, some person or team who is looking out for this
+						- Having a dedicated person is a way to ensure investment in this is ongoing
 					</aside>
 				</section>
 				<section>
-					 <h1>Reduce Friction</h1> 
-					<p>If its harder for people to use than their current system, people won't use it</p>
-					<aside class="notes">
-						You have to make your design system the path of least resistance, lowering cognitive overhead of development, not adding to it. This is vital. A design system is intended to make development much more efficient, enforce a consistent style across sites, and allow for the developer to not worry as much about small decisions like naming and HTML semantics. These are already sorted out for them, meaning they can focus on building product.
-
-						But if your design system is complicated and over-engineered, they may find it frustrating to use and go back to what they know, even if what they know is tacky. If you're a Sass expert, and based your system on complex hooks and functions, you better hope your user (the developer) is also a Sass expert, or wants to learn. This is often not the case. You need to talk to your audience.
-
-						This is a mistake I've personally learned from. While the system was beautiful and performant, it was over engineered to an audience that just wanted class names and structure. I can't emphasize enough how important it is for you to talk to your audience.
-
-						This tweet asking for input: https://twitter.com/Una/status/838791890073960448
-
+					<h1>2. Communication</h1>
+					<aside class="notes" data-markdown>
+						- Once you have resources and a plan to invest in a design system, its really important that this person or team acts as a bridge between design and engineering
+						- Continuous communication is really important here
+						- Remember that nobody wants to be told what to do or prescribed a solution, especially developers
+						- There is a basic psychological reaction in which they will just shut down and stop listening
+						- Despite how much control the engineers have, they need to *feel* like they have input, and *feel* heard
+						- It's like percieved performance, except percieved involvement
 					</aside>
 				</section>
 				<section>
@@ -174,89 +189,98 @@
 						<li>Ask.</li>
 						<li class="fragment">Listen.</li>
 						<li class="fragment tomato">Make Your User Feel Heard.</li>
-						<li class="fragment">Provide Options.</li>
 					</ul>
 					<aside class="notes" data-markdown>
-						- I really want to emphasize this third point, of making your user (which luckily for us is usually the developers we work with) feel heard
-						- So with BUI v2, we provide options -- there is option 1, where users can implement it using Sass, select just the components they want to include, and extend the system using hooks. That's the most performant and extensible output. But then there is also the user who just wants to throw a link onto their page and make it look pretty. A great usecase here is a hackathon.</aside>
+					  - I really want to emphasize this third point, of making your user feel heard
+					  - which brings me to my next point...
+				</aside>
 				</section>
-				<section data-background="img/hackathon.jpg">
-					<h1>Hackathons are Candy to a Budding Design System</h1>
-					<aside class="notes">Having a hackathon internally was a great opportunity to not only test our design system but also get really good user feedback as we did interviews afterward. Some of the feedback that we got was asking for more macro elements and layouts, which were really good points that we've since implemented</aside>
+				<section data-background="img/grocery.jpg">
+					<h1>3. Buy-in</h1>
+					<aside class="notes" data-markdown>
+						- For all of the reasons I just went over, good communication is really important for getting buy-in from your users
+						- You have to make them *want* to use your design system because then you can really win
+						- & a really good way to get someome to use a product is to make it the path of least resistance and show its value
+						- And showing is more powerful than telling
+						- So if you can, have developers use your product in a low-stakes situation where it provides clear benefits
+					</aside>
+				</section>
+				<section>
+					<h3>Hackathons are Candy to a Budding Design System</h3>
+					<aside class="notes" data-markdown>
+						- Hackathons are a great place to debut your design system
+						- Having a hackathon internally at DigitalOcean was a perfect opportunity to:
+						- 1. Evangelize for the design system
+						- 2. See what people were using it for and struggling with (some awesome user testing there)
+						- 3. Get user feedback afterward on how to improve it
+						- The feedback we got from that hackathon was really helpful in shaping what's become of our current iteration</aside>
 				</section>
 				<section data-background-color="white">
 					<img src="img/tomspr.jpg" alt="">
 					<img class="fragment" style="width: 80%; position: absolute; top: 200px; left: 10%; border: 10px solid black;" src="img/tomsprzoom.jpg" alt="">
 					<aside class="notes" data-markdown>
-						- After the hackathon, more people had heard about it, and word spread. This was my favorite moment that occured a few days after the hackathon.
-						- These kinds of moments, where people explore on their own are where you can really get people on your side and using the design system, helping their products scale and grow
-						- And speaking of getting people on your side...
+						- After the hackathon, more people had heard about BUI, and word spread. 
+						- This was my favorite moment that occured a few weeks after the hackathon. //explain + click
+						- These kinds of moments, where people explore on their own are where you can really get people on your side and using the design system, 
+						- helping their products scale and grow
+						- seeing the benefits first hand
+						- Speaking of seeing products scale and grow...
 					</aside>
 				</section>
-				<section>
-					<h1>Buy-in</h1>
-					<aside class="notes">
-						No engineer likes being told what to do in a presecriptive manner. A design systems team needs to keep this in mind. The product will be much more effective if you bring in stakeholders early on (and by stakeholders I mean the engineers that will be using the system). Ask for their input and really listen. This is a big lesson I learned lately. All the work you think is right and good means nothing if the people you are "selling" it to aren't sold. And if they have a say early on, then they become a part of your team. They want it to succeed. So never underestimate the power of buy-in.
-					</aside>
-				</section>
-				<section>
-					<h1>Enforcement</h1>
-					<aside class="notes">
-						But I do need to talk about enforcement of this as well. Someone has to be a decision maker here and say "okay everyone now use this design system to build". Ideally, with the engineers on your side, they will *want* to. They'll be excited to. But there are also a few tools you can put in place to help with cleanliness of code as they are implementing
-					</aside>
-				</section>
-				<section>
-					--> Stylelint
-					--> HTML Lint 
-				</section>
-				<section>
-					<h1>Semantic Versioning</h1>
-					<p>Major.Minor.Patch</p>
-					<aside class="notes">
-						- Something that really helps with implementation of design systems are keeping clean versions.
-						- Semantic versioning is great for design systems
-						- SemVer is where you denote any updates to the system via a system of Major.Minor.Patch
-						- On all of the design systems I've worked on, we've implemented this
-						- Updated a component's color? That's a minor release since it won't cause breaking changes that may affect layout or other components
-						- Changing layout objects or markup was a Major release since this would be a breaking change, and to update to the next version, effort would need to be put into doing some visual regression testing to that things don't break
-					</aside>
-				</section>
-				<section>
-					-- image of github releases --
+				<section data-background="img/architecture.jpg">
+					<h1>4. Solid Architecture</h1>
 					<aside class="notes" data-markdown>
-						- With github, we can link to specific version releases
-						- For our built CDN assets, we run a deploy script that automatically created folders for each realease, as well as a `latest` folder if someone wanted the always-up-to-date version of the design system
+						- Build it so that it can grow
+						- Not collide with existing styles (via namespacing or using a component framework that does that for you)
+						- Versioning
 					</aside>
 				</section>
 				<section>
-					<h1>Ownership</h1>
-					<aside class="notes">
-						Ultimately, someone needs to own this. Our design system was initially under a front-end infrastructure team, but its since moved to the design org for a tighter collaboration, and we're looking into how to pull it out into its own product vertical. With this structure, we can open PRs on the system itself, but more importantly, we can also open PRs on where we see inconsistencies throughout the UI and we can allow for other people to file bugs and contribute
+					<h2>Semantic Versioning</h2>
+					<p>Major.Minor.Patch</p>
+					<aside class="notes" data-markdown>
+						- I've used Semantic versioning on all of the design systems I've ever worked on
+						- It uses a system of Major.Minor.Patch for any updates
+						- You can then tag released on Github with versioned updates and ensure that someone's app won't break unintentionally when there is an update
+						- We also use this semantic versioning as a link with our design system assets to keep them in sync, with the same version number corresponding to both Sketch and code
+						- For our built CDN assets, I'll talk about that more in a second, we run a deploy script that automatically created folders for each realease, as well as a `latest` folder if someone wanted the always-up-to-date version of the design system
 					</aside>
 				</section>
-				<section>
-					<h1>Contribution</h1>
-					<aside class="notes">
-						I want to wrap this up by talking about a contribution cycle. As your engineers are implementing the design system, there needs to be a way for them to continue to provide feedback.
+				<section data-background="img/brainpixel.jpg">
+					 <h1>5. Reduce Friction</h1> 
+					<p>If its harder for people to use than their current system, people won't use it</p>
+					<aside class="notes" data-markdown>
+						- Reducing friction kind of sums up all of the other points made here about empathy, communication, and thinking about your user when building a design system
+						- You have to make your design system the path of least resistance, 
+						- and that means lowering cognitive overhead of development, not adding to it
+						- this could change some of the decisions you make, but if your design system is complicated and over-engineered, again, its not going to be used
+						- With the new version of BUI, we provide a few options
+						- Option 1, where users can implement it into a development environment and use Sass, select just the components they want to include, and extend the system using hooks.
+						- That's the most performant and extensible output. Code is clean and everyone's happy.
+						- But not everyone wants to work this way, including Sass a dependancy and learning a new syntax.
+						- There is also the user who just wants to throw a link onto their page and have it look nice, and thats where our versioned built assets come in
+						- What you want (option 1) may not be the path of least resistance for an engineer, and you always have to keep that user in mind
 					</aside>
 				</section>
 				<section data-background="tomato">
 					<blockquote style="color:white">"Empowering product growth with design systems"</blockquote>
 					<ul>
-						<li data-fragment>Investment</li>
-						<li data-fragment>Communication</li>
-						<li data-fragment>Solid Architecture</li>
-						<li data-fragment>Buy-In</li>
-						<li data-fragment>Reducing Friction</li>
+						<li class="fragment">Investment</li>
+						<li class="fragment">Communication</li>
+						<li class="fragment">Buy-In</li>
+						<li class="fragment">Solid Architecture</li>
+						<li class="fragment">Remove Friction</li>
 					</ul>
 					<aside class="notes" data-markdown>
 						- So this brings us back to our theme of tonight: "Empowering product growth with design systems"
-						- I hope that those lessons learned have showed you that the key to this, to empowering product growth, is to empower and enable design system growth through investment, communication, solid architecture, buy-in, and reducing friction
-						- When you make developers excited to use your design system, you then empower them to build quickly and efficiently, and everyone wins.
+						- I hope that those lessonsand tibits have shown you that a design system is only as effective as its adoption
+						- And through investment, communication, buy-in, solid architecture, and removing friction, 
+						- you can get developers excited to use your design system,
+						- empowering them to build quickly and efficiently, and everyone wins.
 					</aside>
 				</section>
 				<section>
-					<h1>Thank you! | @una</h1>
+					<h2>Thank you! 💕🦄  @una</h2>
 				</section>
 			</div>
 		</div>
