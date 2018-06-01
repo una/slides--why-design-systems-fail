@@ -58,6 +58,11 @@
 
 			.reveal .icon-list li  {
 				margin: .5em;
+				text-align: center;
+			}
+
+			.reveal .icon-list li .contain-height {
+				max-height: 180px;
 			}
 
 			.reveal img {
@@ -87,8 +92,8 @@
 				<section data-background="tomato">
 					<blockquote>"Empowering product growth with design systems"</blockquote>
 					<aside class="notes" data-markdown>
-						- I think a big part of *this*, of enabling product growth, is ensuring a successful design system. 
-						- Learning what works and what doesn't, and iterating on it.</aside>
+						- I think a big part of *this idea*, of enabling product growth with design systems, is ensuring a successful design system is being used and adopted. 
+						- I've had a little bit of experience with design systems and have learned a few lessons along the way.</aside>
 				</section>
 				<section>
 					<h2>A Little Bit About Me</h2>
@@ -99,31 +104,29 @@
 					</ul>
 					<aside class="notes" data-markdown>
 						- I've been working on design systems for over 3 years
-						- Started at a startup, designing a pattern library
+						- First pattern library I made was while working for a DC-based startup called Nvite
 						- Joined IBM and worked on the Watson Design System
 						- Moved over to BlueMix to work on the beginings of what eventually became Carbon
 						- Now I work at DigitalOcean on BUI, our current design system
-						- So I've had a little experience with design systems
 					</aside>
 				</section>
 				<section data-background="white">
-					<ul class="icon-list" style="display: inline-flex;">
-						<li><img src="img/buoy-logo.svg" alt=""></li>
-						<li><img src="img/float.svg" alt=""></li>
-						<li><img src="img/BUI-v2.svg" alt=""></li>
+					<ul class="icon-list" style="display: inline-flex; align-items: baseline;">
+						<li><img class="contain-height" src="img/buoy-logo.svg" alt=""><p>Buoy v1</p></li>
+						<li><img src="img/float.svg" alt=""><p>Float</p></li>
+						<li><img src="img/BUI-v2.svg" alt=""><p>BUI v2</p></li>
 					</ul>
 					<aside class="notes" data-markdown>
 						- Within all of those companies, I've seen multiple design systems emerge and try to call themselves the single source of truth.
-						- At DigitalOcean, there are currently 3 floating around, and I can't say I'm not responsible for more than one of these.
-						- When you get frustrated and want to tear something down, though, its important to remember this:
+						- At DigitalOcean, there are currently 3 floating around (because reasons), at various stages of use 
+						- It's important to remember this very important XKCD cartoon, though when it comes to building new design systems:
 					</aside>
 				</section>
 				<section data-background="white">
 					<img src="img/competing standards.png" alt="">
 					<aside class="notes" data-markdown>
-						- People weren't using the first design system that was built for DigitalOcean's cloud dashboard
-						- And a seperate system was then built for the marketing site, which was fine — you can gave different systems if needs are entirely different
-						- But the problem was back witht he first system — that people weren't utilizing it, and this was causing code cruft 
+						- I only have 10 minutes here so we can talk about the stories behind the multiple systems another time, there are some solid reasons, but I want to talk aboutbuilding solid design systems that are utilized and supported the first time around.
+						- The problem was with that first system — that people weren't using it, and this was causing code cruft 
 					</aside>
 				</section>
 				<section>
@@ -150,7 +153,7 @@
 					</ul>
 					<aside class="notes" data-markdown>
 						- These are all good things – the happy path.
-						- So at this point, you're wondering: there are so many benefits, how could developers not use a design system?
+						- If you're wondering "how could developers not use a design system that exists when there are so many benefis?"
 						- The answer is simple: We're all being judged on different things.
 						- Most people aren't being judged on clean code, they need to build features, their job depends on it.
 						- You have to separate that fact from your own OKRs and what you're evaluated on.
@@ -163,12 +166,13 @@
 					<h1>1. Investment</h1>
 					<p>To have a successful design system, you need to make a continuous effort to invest resources into it.</p>
 					<aside class="notes" data-markdown>
+						- This is something that lives on the organizational level
 						- **It's like working out**. 
 						- Small incremental investments over time lead to big gains overall. 
-						- If you invest once in a design system (say, 3 months of overhauling it) but neglect to keep it up, you won't find much improvement after that immediate gratification
+						- If you invest _once_ in a design system (say, 3 months of overhauling it) but neglect to keep it up, you won't find much improvement after that immediate gratification
 						- People will stop using it as it becomes out of sync with new designs and you'll end up with strange, floating bits of code that nobody is using
-						- And then you'll find yourself in for another round of large investment, but dreading going through the process since its fallen out of shape.
-						- And because of how they scale, design systems can really make a large impact across the platform, making it extremely important to really invest in things like accessibility from the start
+						- And then you'll find yourself in for _another_ round of large investment, but dreading going through the process since its fallen out of shape.
+						- Also, because of how they scale, design systems can really make a large impact across the platform, making it extremely important to really invest in things like accessibility from the start
 						- It's also important to have some kind of ownership, some person or team who is looking out for this
 						- Having a dedicated person is a way to ensure investment in this is ongoing
 					</aside>
@@ -178,9 +182,9 @@
 					<aside class="notes" data-markdown>
 						- Once you have resources and a plan to invest in a design system, its really important that this person or team acts as a bridge between design and engineering
 						- Continuous communication is really important here
-						- Remember that nobody wants to be told what to do or prescribed a solution, especially developers
+						- Remember that nobody wants to be told what to do or prescribed a solution, especially developers, who are used to a lot of autonomy (usually they get to choose their own tools at work)
 						- There is a basic psychological reaction in which they will just shut down and stop listening
-						- Despite how much control the engineers have, they need to *feel* like they have input, and *feel* heard
+						- Despite how much control the other engineers have on the process, they need to *feel* like they have input, and *feel* heard
 						- It's like percieved performance, except percieved involvement
 					</aside>
 				</section>
@@ -199,9 +203,11 @@
 					<h1>3. Buy-in</h1>
 					<aside class="notes" data-markdown>
 						- For all of the reasons I just went over, good communication is really important for getting buy-in from your users
+						- You also need to get buy-in from product managment and design. 
+						- It's a lot of people ops, which we'll hear a lot about in the next talk
 						- You have to make them *want* to use your design system because then you can really win
-						- & a really good way to get someome to use a product is to make it the path of least resistance and show its value
-						- And showing is more powerful than telling
+						- & a really good way to get someome to want to use a product is to make it the path of least resistance, to *show* its value
+						- *Showing* is more powerful than *telling*
 						- So if you can, have developers use your product in a low-stakes situation where it provides clear benefits
 					</aside>
 				</section>
@@ -210,9 +216,9 @@
 					<aside class="notes" data-markdown>
 						- Hackathons are a great place to debut your design system
 						- Having a hackathon internally at DigitalOcean was a perfect opportunity to:
-						- 1. Evangelize for the design system
-						- 2. See what people were using it for and struggling with (some awesome user testing there)
-						- 3. Get user feedback afterward on how to improve it
+						1. Evangelize for the design system
+						2. See what people were using it for and struggling with (excellent user testing there)
+						3. Get user feedback afterward on how to improve it
 						- The feedback we got from that hackathon was really helpful in shaping what's become of our current iteration</aside>
 				</section>
 				<section data-background-color="white">
@@ -248,7 +254,7 @@
 				</section>
 				<section data-background="img/brainpixel.jpg">
 					 <h1>5. Reduce Friction</h1> 
-					<p>If its harder for people to use than their current system, people won't use it</p>
+					<p>If it's harder for people to use than their current system, people won't use it</p>
 					<aside class="notes" data-markdown>
 						- Reducing friction kind of sums up all of the other points made here about empathy, communication, and thinking about your user when building a design system
 						- You have to make your design system the path of least resistance, 
