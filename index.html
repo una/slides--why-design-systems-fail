@@ -47,7 +47,7 @@
 						<li><img src="img/bluemix-logo.svg" alt="BlueMix Logo"></li>
 						<li><img src="img/DO-logo.png" alt="Digitalocan Logo"></li>
 					</ul>
-				</section>
+        </section>
 				<section>
           <h2>Design Systems.</h2>
 					<ul class="icon-list">
@@ -66,24 +66,99 @@
 					organizational unity and stability via reusable code snippets and utility styles. They make prototyping a breeze, and provide
 					a common language for both designers and developers. A design system is a culmination of several individual components:
 					</aside>
-				</section>
+        </section>
+        <section>
+          <h2>In this Talk:</h2>
+          <ul>
+            <li class="fragment">What is a Design System</li>
+            <li class="fragment">Working on a Variety of Design Systems</li>
+            <li class="fragment">Design System Execution Details</li>
+            <li class="fragment">What Makes a Design System Successful</li>
+            <li class="fragment">Life Advice</li>
+          </ul>
+        </section>
 				<section>
 					<h2>A Design System Is:</h2>
 					<ul>
-						<li>Style guide or visual pattern library</li>
-						<li>Design tooling (i.e. Sketch Library)</li>
-						<li>Component library (where the components live in code)</li>
-						<li>Code usage guidelines and documentation</li>
-						<li>Design usage documentation</li>
-						<li>Voice and tone guideline</li>
-						<li>Animation language guideline</li>
+						<li class="fragment">Style guide or visual pattern library</li>
+						<li class="fragment">Design tooling (i.e. Sketch Library)</li>
+						<li class="fragment">Component library (where the components live in code)</li>
+						<li class="fragment">Code usage guidelines and documentation</li>
+						<li class="fragment">Design usage documentation</li>
+						<li class="fragment">Voice and tone guideline</li>
+						<li class="fragment">Animation language guideline</li>
 					</ul>
-				</section>
+        </section>
+        <!-- My Experience with Design Systems -->
+        <section>
+          -- image of tordis going back in space--
+
+          <aside class="notes">
+            design systems have transformed over time and my own experience working with these has also changed. I've had quite the journey.
+          </aside>
+        </section>
+        <section>
+          image of edible arangements rebrand project
+          <aside class="notes">
+            The first design system I built was for a school project. I was in a design class and we had to create a style guide for the product.
+          </aside>
+        </section>
+        <section>
+          image of edible arangements style guide
+          <aside class="notes">
+            The idea of digital style guides was brand new. This is definitely a more design-focused system -- with basics like colors, typography, and even image usage defined and documented. I used a fancy SVG effect in the intro because I thought it was cool.
+          </aside>
+        </section>
+        <section>
+          - nvite photo -
+          
+          <aside class="notes">
+            The second design system I worked on was at a small startup called nvite
+          </aside>
+        </section>
+        <section>
+            - try to find image of design systems at nvite -
+          <aside class="notes">
+            - I did a lot of experimental work, like building prototypes of dashboard, and another thing I did was to begin documenting a design system
+            - Now this was not only for internal work, but also for developers who might be using our API, that was something we were thinking of back then
+            - This was a time when design systems were a kind-of relatively new concept
+          </aside>
+        </section>
+        <section>
+          Watson Image of teammates
+          <aside class="notes">
+            - The third design system I worked on was an architecture-based component library for IBM Watson
+            - I worked on a small team, and really focused on semantics and accessibility
+          </aside>
+        </section>
+        <section>
+          naming gif/jif gif
+          <aside class="notes">
+            There were a lot of discussions about nuances
+          </aside>
+        </section>
+        <section>
+          bluemix teammates
+          <aside class="notes">
+            - I then began working on the first iteration of what became the Carbon Design System
+            - This was the first time I was able to work with a larger team on the design system
+            - There were 10 of us -- developers, designers, and project management
+          </aside>
+        </section>
+        <section>
+          Go through Carbon Design System
+          <aside class="notes">
+            This has now become a much more robust system, go through it
+          </aside>
+        </section>
+        <section>
+          And then I began working at DigitalOcean on a plethora of design systems...
+        </section>
 				<!-- about BUI -->
 				<section data-background="white">
 					<ul class="icon-list" style="display: inline-flex; align-items: baseline;">
-						<li><img class="contain-height" src="img/buoy-logo.svg" alt=""><p>Buoy v1</p></li>
-						<li><img src="img/float.svg" alt=""><p>Float</p></li>
+						<li class="fragment"><img class="contain-height" src="img/buoy-logo.svg" alt=""><p>Buoy v1</p></li>
+						<li class="fragment"><img src="img/float.svg" alt=""><p>Float</p></li>
 						<li><img src="img/BUI-v2.svg" alt=""><p>BUI v2</p></li>
 					</ul>
 					<aside class="notes" data-markdown>
@@ -95,7 +170,6 @@
 				<section data-background="white">
 					<img src="img/competing standards.png" alt="">
 					<aside class="notes" data-markdown>
-						- I only have 10 minutes here so we can talk about the stories behind the multiple systems another time, there are some solid reasons, but I want to talk aboutbuilding solid design systems that are utilized and supported the first time around.
 						- The problem was with that first system — that people weren't using it, and this was causing code cruft 
 					</aside>
 				</section>
@@ -110,7 +184,19 @@
 						- I think understanding this point is critical to the discussion of how to empower a company to grow via design systems
 						- Because if you don't take usage and support into account, you're missing out on all of the benefits of your hard work building that system
 					</aside>
-				</section>
+        </section>
+        <section>
+          In order to prevent things like this, you can use CSS in JS, styled components, and proper naming conventions like BEM. Let me go through some of those and how they can prevent these sorts of issues
+        </section>
+        <section>
+          BEM
+        </section>
+        <section>
+          CSS in JS
+        </section>
+        <section>
+          <h1>What I've Learned</h1>
+        </section>
 				<section>
 					<h2>Happy Design Systems:</h2>
 					<ul>
@@ -248,13 +334,28 @@
 						<li class="fragment">Remove Friction</li>
 					</ul>
 					<aside class="notes" data-markdown>
-						- So this brings us back to our theme of tonight: "Empowering product growth with design systems"
 						- I hope that those lessonsand tibits have shown you that a design system is only as effective as its adoption
 						- And through investment, communication, buy-in, solid architecture, and removing friction, 
 						- you can get developers excited to use your design system,
 						- empowering them to build quickly and efficiently, and everyone wins.
 					</aside>
-				</section>
+        </section>
+        <section>
+          <h1>Controversial Statement Alert</h1>
+          gif of shocked face
+        </section>
+        <section>
+          <h2>You Might Not Need A Design System.</h2>
+          <aside class="notes">This is controversial because there is this push that everyone needs a design system. But its like the JavaScript framework React. React is a great solution, but its not the *right* solution for every project. </aside>
+        </section>
+        <section>
+          <aside class="notes">
+              I did mention above that a design system can't be succesful without buy-in and coordination, so here is me providing a warning that a design system cannot be a one-person effort. If you're inspired by this talk and go back to your company and start building a design system, they might not know what to do with it. It might be a massive amount of work falling on deaf ears. It's really important to know your audience and your toolset. A design system might not be the best use of your time. If you're working on a small project
+          </aside>
+        </section>
+        <section>
+          The best time to build a design system is while a product is evolving, but they can be built in retrospect as well. The earlier the better, so its just something you have to manage.
+        </section>
 				<section>
 					<h2>Thank you! 💕🦄  @una</h2>
 				</section>

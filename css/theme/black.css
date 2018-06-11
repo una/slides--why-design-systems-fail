@@ -311,7 +311,7 @@ body {
   font-weight: 200;
   text-transform: none; }
 
-.tomato {
+.reveal .tomato {
   color: tomato; }
 
 .reveal blockquote {
@@ -323,7 +323,8 @@ body {
 .reveal .icon-list {
   list-style: none;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 .reveal .icon-list li {
   margin: .5em;
