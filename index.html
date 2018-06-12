@@ -29,8 +29,8 @@
 			<div class="slides">
 				<section>
 					<h1>Why Design Systems Fail</h1>
-					<h2><span class="tomato">An Event Apart</span> | Boston 2018</h2>
-          <h3>Una Kravets | <span class="tomato">@una</span></h3>
+					<h2><span class="magenta">An Event Apart</span> | Boston 2018</h2>
+          <h3>Una Kravets | <span class="magenta">@una</span></h3>
         </section>
         <section>
           <h2>A Bit About Me...</h2>
@@ -72,9 +72,9 @@
           <ul>
             <li class="fragment">What is a Design System</li>
             <li class="fragment">Working on a Variety of Design Systems</li>
-            <li class="fragment">Design System Execution Details</li>
-            <li class="fragment">What Makes a Design System Successful</li>
-            <li class="fragment">Life Advice</li>
+            <li class="fragment">What Makes a Design System Successful (or not)</li>
+            <li class="fragment">Execution Details of Successful Design Systems</li>
+            <li class="fragment">Steps for Getting Started</li>
           </ul>
         </section>
 				<section>
@@ -186,15 +186,6 @@
 					</aside>
         </section>
         <section>
-          In order to prevent things like this, you can use CSS in JS, styled components, and proper naming conventions like BEM. Let me go through some of those and how they can prevent these sorts of issues
-        </section>
-        <section>
-          BEM
-        </section>
-        <section>
-          CSS in JS
-        </section>
-        <section>
           <h1>What I've Learned</h1>
         </section>
 				<section>
@@ -220,14 +211,22 @@
 				</section>
 				<section data-background="img/gym.jpg">
 					<h1>1. Investment</h1>
-					<p>To have a successful design system, you need to make a continuous effort to invest resources into it.</p>
+          <p class="fragment">To have a successful design system, you need to make a continuous effort to invest resources into it.</p>
+          </section>
+          <section>
+            working out image / gif (maybe break up into two slides)
+            <aside class="notes">
+              - This is something that lives on the organizational level
+              - **It's like working out**. 
+              - Small incremental investments over time lead to big gains overall. 
+              - If you invest _once_ in a design system (say, 3 months of overhauling it) but neglect to keep it up, you won't find much improvement after that immediate gratification
+              - People will stop using it as it becomes out of sync with new designs and you'll end up with strange, floating bits of code that nobody is using
+              - And then you'll find yourself in for _another_ round of large investment, but dreading going through the process since its fallen out of shape.
+            </aside>
+          </section>
+          <section>
+            scaling image -- talk about accessibility
 					<aside class="notes" data-markdown>
-						- This is something that lives on the organizational level
-						- **It's like working out**. 
-						- Small incremental investments over time lead to big gains overall. 
-						- If you invest _once_ in a design system (say, 3 months of overhauling it) but neglect to keep it up, you won't find much improvement after that immediate gratification
-						- People will stop using it as it becomes out of sync with new designs and you'll end up with strange, floating bits of code that nobody is using
-						- And then you'll find yourself in for _another_ round of large investment, but dreading going through the process since its fallen out of shape.
 						- Also, because of how they scale, design systems can really make a large impact across the platform, making it extremely important to really invest in things like accessibility from the start
 						- It's also important to have some kind of ownership, some person or team who is looking out for this
 						- Having a dedicated person is a way to ensure investment in this is ongoing
@@ -248,7 +247,7 @@
 					<ul>
 						<li>Ask.</li>
 						<li class="fragment">Listen.</li>
-						<li class="fragment tomato">Make Your User Feel Heard.</li>
+						<li class="fragment magenta">Make Your User Feel Heard.</li>
 					</ul>
 					<aside class="notes" data-markdown>
 					  - I really want to emphasize this third point, of making your user feel heard
@@ -266,7 +265,10 @@
 						- *Showing* is more powerful than *telling*
 						- So if you can, have developers use your product in a low-stakes situation where it provides clear benefits
 					</aside>
-				</section>
+        </section>
+        <section>
+          tweet about code is only 20%
+        </section>
 				<section>
 					<h3>Hackathons are Candy to a Budding Design System</h3>
 					<aside class="notes" data-markdown>
@@ -307,7 +309,22 @@
 						- We also use this semantic versioning as a link with our design system assets to keep them in sync, with the same version number corresponding to both Sketch and code
 						- For our built CDN assets, I'll talk about that more in a second, we run a deploy script that automatically created folders for each realease, as well as a `latest` folder if someone wanted the always-up-to-date version of the design system
 					</aside>
-				</section>
+        </section>
+        <section>
+          <h2>Technology Choice</h2>
+          <aside class="notes">
+            Remember the slide with all of that unused CSS? This could be prevented by using a component-based system.
+          </aside>
+        </section>
+        <section>
+          BEM
+        </section>
+        <section>
+          CSS in JS
+        </section>
+        <section>
+          Design Tokens
+        </section>
 				<section data-background="img/brainpixel.jpg">
 					 <h1>5. Reduce Friction</h1> 
 					<p>If it's harder for people to use than their current system, people won't use it</p>
@@ -324,22 +341,6 @@
 						- What you want (option 1) may not be the path of least resistance for an engineer, and you always have to keep that user in mind
 					</aside>
 				</section>
-				<section data-background="tomato">
-					<blockquote style="color:white">"Empowering product growth with design systems"</blockquote>
-					<ul>
-						<li class="fragment">Investment</li>
-						<li class="fragment">Communication</li>
-						<li class="fragment">Buy-In</li>
-						<li class="fragment">Solid Architecture</li>
-						<li class="fragment">Remove Friction</li>
-					</ul>
-					<aside class="notes" data-markdown>
-						- I hope that those lessonsand tibits have shown you that a design system is only as effective as its adoption
-						- And through investment, communication, buy-in, solid architecture, and removing friction, 
-						- you can get developers excited to use your design system,
-						- empowering them to build quickly and efficiently, and everyone wins.
-					</aside>
-        </section>
         <section>
           <h1>Controversial Statement Alert</h1>
           gif of shocked face
@@ -354,8 +355,75 @@
           </aside>
         </section>
         <section>
-          The best time to build a design system is while a product is evolving, but they can be built in retrospect as well. The earlier the better, so its just something you have to manage.
+          The best time to build a design system is while a product is evolving, but they can be built in retrospect as well. The earlier the better, so its just something you have to manage. 
         </section>
+        <section data-background="#ae6df1">
+            <blockquote style="color:white">"Empowering product growth with design systems"</blockquote>
+            <ul>
+              <li class="fragment">Investment</li>
+              <li class="fragment">Communication</li>
+              <li class="fragment">Buy-In</li>
+              <li class="fragment">Solid Architecture</li>
+              <li class="fragment">Remove Friction</li>
+            </ul>
+            <aside class="notes" data-markdown>
+              Now let's talk about how to actually start a design System -- and some practical steps
+            </aside>
+          </section>
+          <section>
+            <h1>So You Want to Start a Design System</h1>
+          </section>
+          <section>
+            - start with what you have (check out your existing codebase)
+          </section>
+          <section>
+            - do style audits cssstats.com
+            - image of the color consolidation workshop at DO
+          </section>
+          <section>
+            - a11y audit
+          </section>
+          <section>
+            - do a component audit
+              - print out all of the pages and cut out all of the different buttons
+              - figure out what is the "true" base style vs. what is a variant
+          </section>
+          <section>
+            - use this info and these perf improvemnts to get buy in
+          </section>
+          <section>
+            - select technology (react, vanilla js/css, etc.whatever is easier to use)
+          </section>
+          <section>
+            - start small -- start with common components like buttons and typography, forms -- anything that is a base HTML element
+          </section>
+          <section>
+            - While you do this, you'll see that a naming convention starts to emerge, so be consistent with your naming
+          </section>
+          <section>
+            - then you can put together more complex components like cards that compose some of those basic elements
+          </section>
+          <section>
+            - Put together the site
+            - Share, profit, be happy
+          </section>
+          <section data-background="#ae6df1">
+              <blockquote style="color:white">"Empowering product growth with design systems"</blockquote>
+              <ul>
+                <li>Investment</li>
+                <li>Communication</li>
+                <li>Buy-In</li>
+                <li>Solid Architecture</li>
+                <li>Remove Friction</li>
+              </ul>
+              <aside class="notes" data-markdown>
+                - I just want to bring this slide up again to remind you about the basics -- its really about people
+                - I hope that those lessons and tibits have shown you that a design system is only as effective as its adoption
+                - Through investment, communication, buy-in, solid architecture, and removing friction, 
+                - you can get developers excited to use your design system,
+                - empowering them to build quickly and efficiently, and everyone wins.
+              </aside>
+            </section>
 				<section>
 					<h2>Thank you! 💕🦄  @una</h2>
 				</section>

@@ -311,8 +311,8 @@ body {
   font-weight: 200;
   text-transform: none; }
 
-.reveal .tomato {
-  color: tomato; }
+.reveal .magenta {
+  color: #ae6df1; }
 
 .reveal blockquote {
   box-shadow: none;
