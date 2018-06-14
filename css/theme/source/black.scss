@@ -104,7 +104,8 @@ section.has-light-background {
     background: none !important;
     border: none !important;
     box-shadow: none !important;
-    width: 100%;
+    max-width: 900px;
+    max-height: 94vh;
   }
         
   .about img {
